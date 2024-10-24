@@ -12,8 +12,6 @@
 		D4123A7628261377002C3C42 /* UIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4123A7528261377002C3C42 /* UIConstants.swift */; };
 		D4123A7F2826EF3B002C3C42 /* TwoFHeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4123A7E2826EF3B002C3C42 /* TwoFHeyTests.swift */; };
 		D41FABD828177D7F00B0F829 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D41FABD728177D7F00B0F829 /* WebKit.framework */; };
-		D41FABE12817806E00B0F829 /* onboarding.html in Resources */ = {isa = PBXBuildFile; fileRef = D41FABE02817806E00B0F829 /* onboarding.html */; };
-		D41FABE32817808C00B0F829 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = D41FABE22817808C00B0F829 /* assets */; };
 		D4331327281F5D3500AC5343 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = D4331326281F5D3500AC5343 /* SQLite */; };
 		D433132F281F630400AC5343 /* AutoLauncherAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D433132E281F630400AC5343 /* AutoLauncherAppDelegate.swift */; };
 		D4331341281F655900AC5343 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4331340281F655900AC5343 /* ServiceManagement.framework */; };
@@ -26,7 +24,6 @@
 		D4AF833D2825FFFA0034A7BE /* AutoLauncher.app in Copy Files */ = {isa = PBXBuildFile; fileRef = D433132C281F630400AC5343 /* AutoLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D4AF833F2826018D0034A7BE /* Main.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4AF833E2826018D0034A7BE /* Main.xib */; };
 		D4F5CAA02817688800A39E6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F5CA9F2817688800A39E6D /* AppDelegate.swift */; };
-		D4F5CAA22817688800A39E6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F5CAA12817688800A39E6D /* ViewController.swift */; };
 		D4F5CAA42817688900A39E6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4F5CAA32817688900A39E6D /* Assets.xcassets */; };
 		D4F5CAA72817688900A39E6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4F5CAA52817688900A39E6D /* Main.storyboard */; };
 		D4F5CAB2281768B000A39E6D /* OTPParserContants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F5CAAF281768B000A39E6D /* OTPParserContants.swift */; };
@@ -39,7 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D4123A802826EF3B002C3C42 /* PBXContainerItemProxy */ = {
+		0F6D3C702BA8C51B00FCC40A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D4F5CA942817688800A39E6D /* Project object */;
 			proxyType = 1;
@@ -69,8 +66,6 @@
 		D4123A7C2826EF3B002C3C42 /* TwoFHeyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwoFHeyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4123A7E2826EF3B002C3C42 /* TwoFHeyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoFHeyTests.swift; sourceTree = "<group>"; };
 		D41FABD728177D7F00B0F829 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		D41FABE02817806E00B0F829 /* onboarding.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = onboarding.html; sourceTree = "<group>"; };
-		D41FABE22817808C00B0F829 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 		D41FABE428178CDB00B0F829 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		D433132C281F630400AC5343 /* AutoLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D433132E281F630400AC5343 /* AutoLauncherAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLauncherAppDelegate.swift; sourceTree = "<group>"; };
@@ -83,9 +78,8 @@
 		D479A3E62822B7B300915AAA /* ParserConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserConfigManager.swift; sourceTree = "<group>"; };
 		D4AF833C2825FEE70034A7BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D4AF833E2826018D0034A7BE /* Main.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Main.xib; sourceTree = "<group>"; };
-		D4F5CA9C2817688800A39E6D /* TwoFHey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwoFHey.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4F5CA9C2817688800A39E6D /* 2FHey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2FHey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4F5CA9F2817688800A39E6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D4F5CAA12817688800A39E6D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D4F5CAA32817688900A39E6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4F5CAA62817688900A39E6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D4F5CAA82817688900A39E6D /* TwoFHey.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TwoFHey.entitlements; sourceTree = "<group>"; };
@@ -144,15 +138,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D41FABD92817803100B0F829 /* wwwonboarding */ = {
-			isa = PBXGroup;
-			children = (
-				D41FABE22817808C00B0F829 /* assets */,
-				D41FABE02817806E00B0F829 /* onboarding.html */,
-			);
-			path = wwwonboarding;
-			sourceTree = "<group>";
-		};
 		D433132D281F630400AC5343 /* AutoLauncher */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,7 +173,7 @@
 		D4F5CA9D2817688800A39E6D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D4F5CA9C2817688800A39E6D /* TwoFHey.app */,
+				D4F5CA9C2817688800A39E6D /* 2FHey.app */,
 				D433132C281F630400AC5343 /* AutoLauncher.app */,
 				D4123A7C2826EF3B002C3C42 /* TwoFHeyTests.xctest */,
 			);
@@ -200,12 +185,10 @@
 			children = (
 				D4AF833C2825FEE70034A7BE /* Info.plist */,
 				D479A3E52822B5A100915AAA /* DataManagement */,
-				D41FABD92817803100B0F829 /* wwwonboarding */,
 				D4F5CABA281768D800A39E6D /* Models */,
 				D4F5CAB5281768BE00A39E6D /* Views */,
 				D4F5CAAE281768A100A39E6D /* OTPParser */,
 				D4F5CA9F2817688800A39E6D /* AppDelegate.swift */,
-				D4F5CAA12817688800A39E6D /* ViewController.swift */,
 				6547376D29B8973800523B18 /* Permission.swift */,
 				658FC8B929B8395D008CB815 /* ViewControllerNative.swift */,
 				D4F5CAA32817688900A39E6D /* Assets.xcassets */,
@@ -260,7 +243,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				D4123A812826EF3B002C3C42 /* PBXTargetDependency */,
+				0F6D3C712BA8C51B00FCC40A /* PBXTargetDependency */,
 			);
 			name = TwoFHeyTests;
 			productName = TwoFHeyTests;
@@ -304,7 +287,7 @@
 				D4331343281F6B6700AC5343 /* HotKey */,
 			);
 			productName = TwoFHey;
-			productReference = D4F5CA9C2817688800A39E6D /* TwoFHey.app */;
+			productReference = D4F5CA9C2817688800A39E6D /* 2FHey.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -315,7 +298,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1330;
-				LastUpgradeCheck = 1340;
+				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					D4123A7B2826EF3B002C3C42 = {
 						CreatedOnToolsVersion = 13.3.1;
@@ -374,8 +357,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4F5CAA42817688900A39E6D /* Assets.xcassets in Resources */,
-				D41FABE32817808C00B0F829 /* assets in Resources */,
-				D41FABE12817806E00B0F829 /* onboarding.html in Resources */,
 				D4F5CAA72817688900A39E6D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,7 +414,6 @@
 				D479A3E02821E74500915AAA /* CustomOTPParsers.swift in Sources */,
 				D479A3E72822B7B300915AAA /* ParserConfigManager.swift in Sources */,
 				D4F5CAB2281768B000A39E6D /* OTPParserContants.swift in Sources */,
-				D4F5CAA22817688800A39E6D /* ViewController.swift in Sources */,
 				D4AF833B2825FE400034A7BE /* main.swift in Sources */,
 				D4F5CAB8281768C500A39E6D /* OverlayView.swift in Sources */,
 				658FC8BA29B8395D008CB815 /* ViewControllerNative.swift in Sources */,
@@ -448,10 +428,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D4123A812826EF3B002C3C42 /* PBXTargetDependency */ = {
+		0F6D3C712BA8C51B00FCC40A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D4F5CA9B2817688800A39E6D /* TwoFHey */;
-			targetProxy = D4123A802826EF3B002C3C42 /* PBXContainerItemProxy */;
+			targetProxy = 0F6D3C702BA8C51B00FCC40A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -470,17 +450,20 @@
 		D4123A832826EF3B002C3C42 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
+				BUNDLE_LOADER = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/2FHey.app/Contents/MacOS/2FHey";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 2H66PPM438;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sofriendly.2fhey.TwoFHeyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TwoFHey.app/Contents/MacOS/TwoFHey";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/2FHey.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/2FHey";
 			};
 			name = Debug;
 		};
@@ -488,16 +471,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 2H66PPM438;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sofriendly.2fhey.TwoFHeyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TwoFHey.app/Contents/MacOS/TwoFHey";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/2FHey.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/2FHey";
 			};
 			name = Release;
 		};
@@ -507,10 +493,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = AutoLauncher/AutoLauncher.entitlements;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 2H66PPM438;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AutoLauncher/Info.plist;
@@ -524,6 +512,7 @@
 				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sofriendly.2fhey.AutoLauncher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -536,10 +525,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = AutoLauncher/AutoLauncher.entitlements;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 2H66PPM438;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AutoLauncher/Info.plist;
@@ -553,6 +544,7 @@
 				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sofriendly.2fhey.AutoLauncher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -563,6 +555,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -592,9 +585,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -613,6 +608,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = 2FHey;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -623,6 +619,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -652,9 +649,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -666,6 +665,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = 2FHey;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -680,10 +680,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = TwoFHey/TwoFHey.entitlements;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 2;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 2H66PPM438;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -695,9 +696,10 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sofriendly.2fhey;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = 2FHey;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -711,10 +713,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = TwoFHey/TwoFHey.entitlements;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 2;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 2H66PPM438;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -726,9 +729,10 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sofriendly.2fhey;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = 2FHey;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};

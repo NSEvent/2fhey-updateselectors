@@ -1,9 +1,4 @@
-//
-//  ViewControllerNative.swift
-//  TwoFHey
-//
-//  Created by Umang Loriya on 08/03/23.
-//
+
 
 import Foundation
 
@@ -68,14 +63,24 @@ class ViewControllerNative: NSViewController {
     @IBOutlet var mainView: NSView!
     @IBOutlet weak var btnRestart: NSButton!
     @IBAction func btnRestartAction(_ sender: Any) {
-        let url = URL(fileURLWithPath: Bundle.main.resourcePath!)
-        let path = url.deletingLastPathComponent().deletingLastPathComponent().absoluteString
-        let task = Process()
-        task.launchPath = "/usr/bin/open"
-        task.arguments = [path]
-        task.launch()
-        exit(0)
+        // Check if the button title is "Done", which means both permissions are granted
+        if btnRestart.title == "Done" {
+            // Close the window
+            DispatchQueue.main.async { [weak self] in
+                self?.view.window?.close()
+            }
+        } else {
+            // Original restart logic (if applicable)
+            let url = URL(fileURLWithPath: Bundle.main.resourcePath!)
+            let path = url.deletingLastPathComponent().deletingLastPathComponent().absoluteString
+            let task = Process()
+            task.launchPath = "/usr/bin/open"
+            task.arguments = [path]
+            task.launch()
+            exit(0)
+        }
     }
+
     private var permissionsService = PermissionsService()
     var timer = Timer()
 
@@ -93,12 +98,6 @@ class ViewControllerNative: NSViewController {
         containerView2.alphaValue = 0
         self.animateLogoAndContainer()
         timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
-        
-
-        
-        
-
-        // Do any additional setup after loading the view.
         
     }
     
@@ -156,31 +155,37 @@ class ViewControllerNative: NSViewController {
     }
     
     @objc func timerAction() {
-        
-        if AppStateManager.shared.hasFullDiscAccess() == .authorized || permissionsService.isTrusted{
-            
+        if AppStateManager.shared.hasRequiredPermissions() {
+            // Update UI to indicate permissions are granted
             viewStatus2.layer?.backgroundColor = NSColor(red: 90/255, green: 180/255, blue: 85/255, alpha: 1).cgColor
             viewStatus1.layer?.backgroundColor = NSColor(red: 90/255, green: 180/255, blue: 85/255, alpha: 1).cgColor
 
+            // Disable buttons as permissions are no longer needed
             btnAccessibility.isEnabled = false
-           
             btnFullDisk.isEnabled = false
+
+            // Stop the timer as it's no longer needed
             timer.invalidate()
-            btnRestart.isHidden = false
+
+            // Change the restart button text to "Done" and show it
+            DispatchQueue.main.async { [weak self] in
+                self?.btnRestart.title = "Done"
+                self?.btnRestart.isHidden = false
+            }
+
             return
         }
-        
+
+        // If not all permissions are granted, update the UI accordingly
         let acc = AppStateManager.shared.hasAccessibilityPermission()
         btnAccessibility.isEnabled = !acc
         viewStatus1.layer?.backgroundColor = acc ? NSColor(red: 90/255, green: 180/255, blue: 85/255, alpha: 1).cgColor : NSColor(red: 238/255, green: 203/255, blue: 201/255, alpha: 1).cgColor
 
-        
-        let temp = AppStateManager.shared.hasFullDiscAccess()
-        btnFullDisk.isEnabled = temp != .authorized
-        viewStatus2.layer?.backgroundColor = temp == .authorized ? NSColor(red: 90/255, green: 180/255, blue: 85/255, alpha: 1).cgColor : NSColor(red: 238/255, green: 203/255, blue: 201/255, alpha: 1).cgColor
-        
-        
-        }
+        let diskAccess = AppStateManager.shared.hasFullDiscAccess()
+        btnFullDisk.isEnabled = diskAccess != .authorized
+        viewStatus2.layer?.backgroundColor = diskAccess == .authorized ? NSColor(red: 90/255, green: 180/255, blue: 85/255, alpha: 1).cgColor : NSColor(red: 238/255, green: 203/255, blue: 201/255, alpha: 1).cgColor
+    }
+
 
     override var representedObject: Any? {
         didSet {

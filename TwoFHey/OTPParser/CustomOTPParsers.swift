@@ -1,10 +1,3 @@
-//
-//  CustomOTPParsers.swift
-//  TwoFHey
-//
-//  Created by Drew Pomerleau on 5/3/22.
-//
-
 import Foundation
 
 extension String {

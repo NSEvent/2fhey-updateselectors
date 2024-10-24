@@ -1,10 +1,3 @@
-//
-//  OTPParserConfiguration.swift
-//  TwoFHey
-//
-//  Created by Drew Pomerleau on 5/3/22.
-//
-
 import Foundation
 
 public struct OTPParserCustomPatternConfiguration: Codable {

@@ -1,46 +1,45 @@
-//
-//  Permission.swift
-//  TwoFHey
-//
-//  Created by Umang Loriya on 08/03/23.
-//
-
-
 import Cocoa
-
-// I had a lot of problems getting all this setup so that the Accessibility permissions were clear and prompted to the user.
-// macOS and Xcode have some 'interesting' quirks that impeade the development of this. Mainly that Xcode by default will run
-//  in sandboxed mode, meaning native macOS permissions prompts won't fire until thats dissabled in the applications entitlements
-//  file. The other is that macOS will not reset or apply the permissions to a new build of the app as the app signature changes
-//  for each build, which makes sense but its annoying there isn't a way to automate this during development. The only 'solution'
-//  I have yet found is to just use `tccutil` to reset the permissions for the $PRODUCT_BUNDLE_IDENTIFIER as an Xcode build script
-//  with the annoyance being that you have to apply the permissions on each app build...
-// See: https://stackoverflow.com/a/61890478/4494375
-
-
+import Combine
 
 final class PermissionsService: ObservableObject {
-    // Store the active trust state of the app.
-    @Published var isTrusted: Bool = AXIsProcessTrusted()
-
-    // Poll the accessibility state every 1 second to check
-    //  and update the trust status.
-    func pollAccessibilityPrivileges() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            self.isTrusted = AXIsProcessTrusted()
-
-            if !self.isTrusted {
-                self.pollAccessibilityPrivileges()
+    @Published var isTrusted: Bool = false
+    private var checkTimer: Timer?
+    
+    init() {
+        self.isTrusted = AXIsProcessTrustedWithOptions(nil)
+    }
+    
+    // This static method attempts to prompt the user for Accessibility permissions
+    static func acquireAccessibilityPrivileges() {
+        let options: NSDictionary = [kAXTrustedCheckOptionPrompt.takeRetainedValue() as NSString: true]
+        AXIsProcessTrustedWithOptions(options as CFDictionary)
+    }
+    
+    func startMonitoringAccessibilityPrivileges() {
+        // Immediately check and update the trust status
+        self.isTrusted = AXIsProcessTrustedWithOptions(nil)
+        
+        // Start or restart the timer
+        checkTimer?.invalidate()
+        checkTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] _ in
+            self?.updateTrustStatus()
+        }
+    }
+    
+    private func updateTrustStatus() {
+        let currentStatus = AXIsProcessTrustedWithOptions(nil)
+        if currentStatus != self.isTrusted {
+            self.isTrusted = currentStatus
+            if currentStatus {
+                // Stop the timer if the app is trusted to save resources
+                checkTimer?.invalidate()
+                checkTimer = nil
             }
         }
     }
-
-    // Request accessibility permissions, this should prompt
-    //  macOS to open and present the required dialogue open
-    //  to the correct page for the user to just hit the add
-    //  button.
-    static func acquireAccessibilityPrivileges() {
-        let options: NSDictionary = [kAXTrustedCheckOptionPrompt.takeRetainedValue() as NSString: true]
-        _ = AXIsProcessTrustedWithOptions(options)
+    
+    func stopMonitoring() {
+        checkTimer?.invalidate()
+        checkTimer = nil
     }
 }
