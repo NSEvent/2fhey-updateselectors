@@ -5,6 +5,8 @@
 //  Created by Drew Pomerleau on 4/22/22.
 //
 
+typealias Expression = SQLite.Expression
+
 extension String {
   var isBlank: Bool {
     return allSatisfy({ $0.isWhitespace })
